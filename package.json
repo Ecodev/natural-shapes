@@ -1,6 +1,6 @@
 {
   "name": "natural-shapes",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "prod": "gulp prod",
