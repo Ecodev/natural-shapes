@@ -1,0 +1,65 @@
+
+@mixin natural-trapezoid-bottom($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
+    @include shape();
+
+    width: $ceilingSize;
+    height: 0;
+
+    $residualSize: $baseSize - $ceilingSize;
+
+    border-right: $residualSize * (1 - $centerAt) solid transparent;
+    border-bottom: $heightSize solid $color;
+    border-left: $residualSize * $centerAt solid transparent;
+}
+
+@mixin natural-trapezoid-top($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
+    @include shape();
+
+    width: $ceilingSize;
+    height: 0;
+
+    $residualSize: $baseSize - $ceilingSize;
+
+    border-right: $residualSize * (1 - $centerAt) solid transparent;
+    border-top: $heightSize solid $color;
+    border-left: $residualSize * $centerAt solid transparent;
+}
+
+@mixin natural-trapezoid-left($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
+    @include shape();
+
+    height: $ceilingSize;
+    width: 0;
+
+    $residualSize: $baseSize - $ceilingSize;
+
+    border-top: $residualSize * (1 - $centerAt) solid transparent;
+    border-left: $heightSize solid $color;
+    border-bottom: $residualSize * $centerAt solid transparent;
+}
+
+@mixin natural-trapezoid-right($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
+    @include shape();
+
+    height: $ceilingSize;
+    width: 0;
+
+    $residualSize: $baseSize - $ceilingSize;
+
+    border-top: $residualSize * (1 - $centerAt) solid transparent;
+    border-right: $heightSize solid $color;
+    border-bottom: $residualSize * $centerAt solid transparent;
+}
+
+@mixin natural-trapezoid($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5, $basePos: 'bottom') {
+    @if $basePos == 'bottom' {
+        @include natural-trapezoid-bottom($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
+    } @else if $basePos == 'top' {
+        @include natural-trapezoid-top($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
+    } @else if $basePos == 'left' {
+        @include natural-trapezoid-left($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
+    } @else if $basePos == 'right' {
+        @include natural-trapezoid-right($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
+    }
+}
+

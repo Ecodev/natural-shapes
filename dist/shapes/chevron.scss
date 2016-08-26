@@ -1,0 +1,22 @@
+
+@mixin chevron($direction, $width, $height, $skew, $color) {
+    position: relative;
+    width: $width;
+    height: $height;
+    &:before, &:after {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: $color;
+        content: '';
+    }
+    &:before {
+        left: 0;
+        transform: skew(0deg, $skew);
+    }
+    &:after {
+        right: 0;
+        transform: skew(0deg, -$skew);
+    }
+}

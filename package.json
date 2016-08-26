@@ -1,0 +1,36 @@
+{
+  "name": "natural-shapes",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "prod": "gulp prod",
+    "dev": "gulp dev",
+    "watch": "gulp watch",
+    "live": "gulp live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ecodev/natural-shapes.git"
+  },
+  "author": "Samuel Baptista <samuel.baptista@ecodev.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ecodev/natural-shapes/issues"
+  },
+  "homepage": "https://github.com/Ecodev/natural-shapes#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-if": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.9",
+    "run-sequence": "^1.2.2"
+  }
+}

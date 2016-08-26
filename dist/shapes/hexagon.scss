@@ -1,0 +1,30 @@
+
+
+@mixin hexagon($width, $height, $color){
+    height: $height;
+    padding: 0 $width;
+    background: $color;
+    font-size: $height / 2;
+    display: inline-block;
+    position: relative;
+    line-height: 1.8;
+
+    &:before, &:after {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        top: 0;
+        border-top: $height / 2 solid transparent;
+        border-bottom: $height / 2  solid transparent;
+        transform:rotateY(180deg);
+    }
+    &:before {
+        left: 100%;
+        border-right: $height / 2 solid $color;
+    }
+    &:after {
+        right: 100%;
+        border-left: $height / 2 solid $color;
+    }
+}

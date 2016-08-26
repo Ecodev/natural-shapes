@@ -1,0 +1,11 @@
+@mixin natural-rectangle($color, $width, $height, $borderColor:'transparent', $borderWidth:0) {
+    @include shape();
+    width: $width;
+    height: $height;
+    background: $color;
+    border: $borderWidth solid $borderColor;
+}
+
+@mixin natural-square($color, $size, $borderColor:'transparent', $borderWidth:0) {
+    @include natural-rectangle($color, $size, $size, $borderColor, $borderWidth);
+}
