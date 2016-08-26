@@ -48,7 +48,6 @@ $color2: #8bdae0;
 /**
  * Triangle
  */
-
 #triangle1 {
     @include natural-triangle($color, 100px, 100px);
 }
@@ -60,4 +59,63 @@ $color2: #8bdae0;
 }
 #triangle4 {
     @include natural-triangle($color, 100px, 100px, 0.25, 'left');
+}
+
+
+/**
+ * Parallelogram
+ */
+#parralleloram1 {
+    @include natural-parallelogram-bottom($color, 100px, 50px, 15deg);
+}
+
+#parralleloram2 {
+    @include natural-parallelogram-left($color, 100px, 50px, 15deg);
+}
+
+#parralleloram3 {
+    @include natural-parallelogram-top($color, 100px, 50px, 15deg);
+}
+
+#parralleloram4 {
+    @include natural-parallelogram($color, 50px, 50px, 25deg, 25deg);
+}
+
+
+/**
+ * chevron
+ */
+#chevron1 {
+    @include natural-chevron-right($color, 25px, 30px, 40deg);
+}
+
+#chevron2 {
+    @include natural-chevron-left($color, 25px, 30px, 40deg);
+}
+
+#chevron3 {
+    @include natural-chevron-bottom($color, 25px, 30px, 40deg);
+}
+
+#chevron4 {
+    @include natural-chevron-top($color, 25px, 30px, 40deg);
+}
+
+/**
+ * arrow
+ */
+#arrow1 {
+    @include natural-arrow($color, 1em, 3em, 0);
+}
+
+#arrow2 {
+    @include natural-arrow($color, 20px, 50px, 90deg);
+}
+
+#arrow3 {
+    @include natural-arrow($color, 20px, 50px, 180deg);
+}
+
+#arrow4 {
+    @include natural-arrow($color, 20px, 50px, 270deg);
 }

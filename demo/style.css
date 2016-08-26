@@ -1,6 +1,12 @@
 /** Free triangle (isocele by default) */
 /** Triangle equilateral */
 /**
+ * Bases
+ */
+/**
+ * Chevrons
+ */
+/**
  * General
  */
 /* line 12, /sites/_libraries/natural-shapes.lan/demo/style.scss */
@@ -95,7 +101,7 @@
 /**
  * Triangle
  */
-/* line 52, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 51, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle1 {
   box-sizing: content-box;
   width: 0;
@@ -105,7 +111,7 @@
   border-left: 50px solid transparent;
 }
 
-/* line 55, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 54, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle2 {
   box-sizing: content-box;
   width: 0;
@@ -115,7 +121,7 @@
   border-left: 0px solid transparent;
 }
 
-/* line 58, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 57, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle3 {
   box-sizing: content-box;
   width: 0;
@@ -125,7 +131,7 @@
   border-left: 150px solid transparent;
 }
 
-/* line 61, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 60, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle4 {
   box-sizing: content-box;
   height: 0;
@@ -133,4 +139,265 @@
   border-top: 25px solid transparent;
   border-left: 100px solid #0089e0;
   border-bottom: 75px solid transparent;
+}
+
+/**
+ * Parallelogram
+ */
+/* line 68, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#parralleloram1 {
+  box-sizing: content-box;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(15deg);
+}
+
+/* line 72, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#parralleloram2 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(0, 15deg);
+}
+
+/* line 76, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#parralleloram3 {
+  box-sizing: content-box;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(-15deg);
+}
+
+/* line 80, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#parralleloram4 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(25deg, 25deg);
+}
+
+/**
+ * chevron
+ */
+/* line 88, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron1 {
+  box-sizing: content-box;
+  position: relative;
+  width: 50.17299px;
+  height: 60px;
+}
+
+/* line 10, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron1::before, #chevron1::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+/* line 33, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron1::before {
+  box-sizing: content-box;
+  width: 25px;
+  height: 30px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(-40deg);
+  bottom: 0;
+  right: 12.58649px;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron1::after {
+  box-sizing: content-box;
+  width: 25px;
+  height: 30px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(40deg);
+  top: 0;
+  right: 12.58649px;
+}
+
+/* line 92, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron2 {
+  box-sizing: content-box;
+  position: relative;
+  width: 50.17299px;
+  height: 60px;
+}
+
+/* line 10, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron2::before, #chevron2::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+/* line 47, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron2::before {
+  box-sizing: content-box;
+  width: 25px;
+  height: 30px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(40deg);
+  bottom: 0;
+  right: 12.58649px;
+}
+
+/* line 52, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron2::after {
+  box-sizing: content-box;
+  width: 25px;
+  height: 30px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(-40deg);
+  top: 0;
+  right: 12.58649px;
+}
+
+/* line 96, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron3 {
+  box-sizing: content-box;
+  position: relative;
+  height: 50.17299px;
+  width: 60px;
+}
+
+/* line 10, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron3::before, #chevron3::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+/* line 62, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron3::before {
+  box-sizing: content-box;
+  width: 30px;
+  height: 25px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(0, 40deg);
+  bottom: 12.58649px;
+  left: 0;
+}
+
+/* line 67, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron3::after {
+  box-sizing: content-box;
+  width: 30px;
+  height: 25px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(0, -40deg);
+  bottom: 12.58649px;
+  right: 0;
+}
+
+/* line 100, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron4 {
+  box-sizing: content-box;
+  position: relative;
+  height: 50.17299px;
+  width: 60px;
+}
+
+/* line 10, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron4::before, #chevron4::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+/* line 78, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron4::before {
+  box-sizing: content-box;
+  width: 30px;
+  height: 25px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(0, -40deg);
+  bottom: 12.58649px;
+  left: 0;
+}
+
+/* line 83, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron4::after {
+  box-sizing: content-box;
+  width: 30px;
+  height: 25px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  transform: skew(0, 40deg);
+  bottom: 12.58649px;
+  right: 0;
+}
+
+/**
+ * arrow
+ */
+/* line 107, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow1 {
+  box-sizing: content-box;
+  width: 3em;
+  height: 3em;
+  background: "transparent";
+  border: 0 solid "transparent";
+  box-sizing: border-box;
+  border-top: 1em solid #0089e0;
+  border-right: 1em solid #0089e0;
+  transform: rotate(-45deg);
+  transform-origin: 1.5em 1.5em;
+}
+
+/* line 111, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow2 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: "transparent";
+  border: 0 solid "transparent";
+  box-sizing: border-box;
+  border-top: 20px solid #0089e0;
+  border-right: 20px solid #0089e0;
+  transform: rotate(45deg);
+  transform-origin: 25px 25px;
+}
+
+/* line 115, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow3 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: "transparent";
+  border: 0 solid "transparent";
+  box-sizing: border-box;
+  border-top: 20px solid #0089e0;
+  border-right: 20px solid #0089e0;
+  transform: rotate(135deg);
+  transform-origin: 25px 25px;
+}
+
+/* line 119, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow4 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: "transparent";
+  border: 0 solid "transparent";
+  box-sizing: border-box;
+  border-top: 20px solid #0089e0;
+  border-right: 20px solid #0089e0;
+  transform: rotate(225deg);
+  transform-origin: 25px 25px;
 }

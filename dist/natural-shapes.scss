@@ -1,12 +1,14 @@
 
 // Respect order
+@import 'functions';
 @import 'shapes/rectangle.scss';
 @import 'shapes/trapezoid.scss';
 @import 'shapes/triangle.scss';
 @import 'shapes/circle.scss';
 @import 'shapes/progress.scss';
-@import 'shapes/chevron.scss';
 @import 'shapes/parralellogram.scss';
+@import 'shapes/chevron.scss';
+@import 'shapes/arrow.scss';
 
 $defaultNaturalShapeColor: #0089e0;
 $defaultNaturalBorderColor: #0089e0;
