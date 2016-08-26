@@ -20,9 +20,9 @@
 
     $residualSize: $baseSize - $ceilingSize;
 
-    border-right: $residualSize * (1 - $centerAt) solid transparent;
+    border-right: $residualSize * $centerAt solid transparent;
     border-top: $heightSize solid $color;
-    border-left: $residualSize * $centerAt solid transparent;
+    border-left: $residualSize * (1 - $centerAt) solid transparent;
 }
 
 @mixin natural-trapezoid-left($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
@@ -33,9 +33,9 @@
 
     $residualSize: $baseSize - $ceilingSize;
 
-    border-top: $residualSize * (1 - $centerAt) solid transparent;
+    border-top: $residualSize * $centerAt solid transparent;
     border-left: $heightSize solid $color;
-    border-bottom: $residualSize * $centerAt solid transparent;
+    border-bottom: $residualSize * (1 - $centerAt) solid transparent;
 }
 
 @mixin natural-trapezoid-right($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
