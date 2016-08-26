@@ -1,0 +1,10 @@
+
+
+@mixin parallelogram($width, $height, $skew, $color) {
+    @include rectangle($width, $height, $color);
+    background: $color;
+    transform: skew($skew);
+}
+
+
+
