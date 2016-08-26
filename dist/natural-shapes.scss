@@ -8,6 +8,9 @@
 @import 'shapes/chevron.scss';
 @import 'shapes/parralellogram.scss';
 
+$defaultNaturalShapeColor: #0089e0;
+$defaultNaturalBorderColor: #0089e0;
+
 @mixin shape() {
     box-sizing:content-box;
 }

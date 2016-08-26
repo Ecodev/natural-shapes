@@ -7,7 +7,7 @@
     @include natural-oval($color, $diameter, $diameter, $borderColor, $borderWidth);
 }
 
-@mixin natural-half-circle($color, $diameter, $borderColor, $borderWidth:0, $rotation:0) {
+@mixin natural-half-circle($color, $diameter, $borderColor:'transparent', $borderWidth:0, $rotation:0) {
     @include natural-rectangle($color, $diameter, $diameter/2);
     border-top-left-radius: $diameter + $borderWidth;
     border-top-right-radius: $diameter + $borderWidth;
@@ -19,8 +19,8 @@
     }
 }
 
-@mixin natural-quarter-circle($color, $radius, $borderColor, $borderWidth:0, $rotation:0) {
-    @include natural-rectangle($color, $radius, $radius);
+@mixin natural-quarter-circle($color, $diameter, $borderColor:'transparent', $borderWidth:0, $rotation:0) {
+    @include natural-rectangle($color, $diameter/2, $diameter/2);
     border-top-left-radius: 100%;
     transform: rotate($rotation);
 

@@ -1,7 +1,63 @@
 @import '../dist/natural-shapes.scss';
 //#0089e0
 
-$color: #dbdbdb;
+$color: #0089e0;
 $color1: #0089e0;
 $color2: #8bdae0;
 
+
+/**
+ * General
+ */
+#general1 {
+    @include natural-circle($color, 100px);
+}
+
+#general2 {
+    @include natural-rectangle($color, 150px, 100px);
+}
+
+#general3 {
+    @include natural-trapezoid($color, 150px, 75px, 100px);
+}
+
+#general4 {
+    @include natural-triangle($color, 100px, 100px);
+}
+
+
+
+/**
+ * Circle
+ */
+
+#circle1 {
+    @include natural-circle($color, 100px);
+}
+#circle2 {
+    @include natural-half-circle($color, 100px);
+}
+#circle3 {
+    @include natural-quarter-circle($color, 100px);
+}
+
+#circle4 {
+    @include natural-quarter-circle($color, 100px, $color2, 30px);
+}
+
+/**
+ * Triangle
+ */
+
+#triangle1 {
+    @include natural-triangle($color, 100px, 100px);
+}
+#triangle2 {
+    @include natural-triangle($color, 100px, 100px, 0);
+}
+#triangle3 {
+    @include natural-triangle($color, 150px, 100px, 1);
+}
+#triangle4 {
+    @include natural-triangle($color, 100px, 100px, 0.25, 'left');
+}

@@ -1,2 +1,136 @@
 /** Free triangle (isocele by default) */
 /** Triangle equilateral */
+/**
+ * General
+ */
+/* line 12, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#general1 {
+  box-sizing: content-box;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  border-radius: 100%;
+}
+
+/* line 16, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#general2 {
+  box-sizing: content-box;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+}
+
+/* line 20, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#general3 {
+  box-sizing: content-box;
+  width: 75px;
+  height: 0;
+  border-right: 37.5px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 37.5px solid transparent;
+}
+
+/* line 24, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#general4 {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 50px solid transparent;
+}
+
+/**
+ * Circle
+ */
+/* line 34, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle1 {
+  box-sizing: content-box;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  border-radius: 100%;
+}
+
+/* line 37, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle2 {
+  box-sizing: content-box;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform: rotate(0);
+}
+
+/* line 40, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle3 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+}
+
+/* line 44, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle4 {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid "transparent";
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  border-right: transparent;
+}
+
+/**
+ * Triangle
+ */
+/* line 52, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle1 {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 50px solid transparent;
+}
+
+/* line 55, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle2 {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 0px solid transparent;
+}
+
+/* line 58, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle3 {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border-right: 0px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 150px solid transparent;
+}
+
+/* line 61, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle4 {
+  box-sizing: content-box;
+  height: 0;
+  width: 0;
+  border-top: 25px solid transparent;
+  border-left: 100px solid #0089e0;
+  border-bottom: 75px solid transparent;
+}
