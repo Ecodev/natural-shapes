@@ -1,6 +1,4 @@
-
-
-@mixin hexagon($width, $height, $color){
+@mixin hexagon($width, $height, $color) {
     height: $height;
     padding: 0 $width;
     background: $color;
@@ -16,8 +14,8 @@
         width: 0;
         top: 0;
         border-top: $height / 2 solid transparent;
-        border-bottom: $height / 2  solid transparent;
-        transform:rotateY(180deg);
+        border-bottom: $height / 2 solid transparent;
+        transform: rotateY(180deg);
     }
     &:before {
         left: 100%;

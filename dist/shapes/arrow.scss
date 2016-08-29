@@ -2,11 +2,11 @@
 
     @include natural-square('transparent', $width);
 
-    box-sizing:border-box;
+    box-sizing: border-box;
 
     border-top: $thickness solid $color;
     border-right: $thickness solid $color;
 
-    transform:rotate($angle - 45deg);
-    transform-origin:($width/2) ($width/2); // center of rotation on the center of the inside edge of the arrow
+    transform: rotate($angle - 45deg);
+    transform-origin: ($width/2) ($width/2); // center of rotation on the center of the inside edge of the arrow
 }

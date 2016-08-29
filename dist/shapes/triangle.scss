@@ -1,35 +1,41 @@
-
 /** Free triangle (isocele by default) */
 @mixin natural-triangle($color, $baseSize, $heightSize, $centerAt: 0.5, $basePos: 'bottom') {
     @include natural-trapezoid($color, $baseSize, 0, $heightSize, $centerAt, $basePos);
 }
+
 @mixin natural-triangle-bottom($color, $baseSize, $heightSize, $centerAt: 0.5) {
     @include natural-trapezoid-bottom($color, $baseSize, 0, $heightSize, $centerAt);
 }
+
 @mixin natural-triangle-top($color, $baseSize, $heightSize, $centerAt: 0.5) {
     @include natural-trapezoid-top($color, $baseSize, 0, $heightSize, $centerAt);
 }
+
 @mixin natural-triangle-right($color, $baseSize, $heightSize, $centerAt: 0.5) {
     @include natural-trapezoid-right($color, $baseSize, 0, $heightSize, $centerAt);
 }
+
 @mixin natural-triangle-left($color, $baseSize, $heightSize, $centerAt: 0.5) {
     @include natural-trapezoid-left($color, $baseSize, 0, $heightSize, $centerAt);
 }
-
 
 /** Triangle equilateral */
 @mixin natural-triangle-equilateral($color, $baseSize, $basePos: 'bottom') {
     @include natural-trapezoid($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5, $basePos);
 }
+
 @mixin natural-triangle-equilateral-bottom($color, $baseSize) {
     @include natural-trapezoid-bottom($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
 }
+
 @mixin natural-triangle-equilateral-top($color, $baseSize) {
     @include natural-trapezoid-top($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
 }
+
 @mixin natural-triangle-equilateral-left($color, $baseSize) {
     @include natural-trapezoid-left($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
 }
+
 @mixin natural-triangle-equilateral-right($color, $baseSize) {
     @include natural-trapezoid-right($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
 }

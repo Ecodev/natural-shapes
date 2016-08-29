@@ -1,5 +1,3 @@
-
-
 @mixin natural-parallelogram-bottom($color, $width, $height, $skew) {
     @include natural-rectangle($color, $width, $height);
     transform: skew($skew);
@@ -10,20 +8,15 @@
     transform: skew(-$skew);
 }
 
-
 @mixin natural-parallelogram-left($color, $width, $height, $skew) {
     @include natural-rectangle($color, $height, $width);
     transform: skew(0, $skew);
 }
 
-
 @mixin natural-parallelogram-right($color, $width, $height, $skew) {
     @include natural-rectangle($color, $height, $width);
     transform: skew(0, -$skew);
 }
-
-
-
 
 @mixin natural-parallelogram($color, $width, $height, $skewX, $skewY: 0) {
     @include natural-rectangle($color, $width, $height);

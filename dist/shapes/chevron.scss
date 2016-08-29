@@ -1,4 +1,3 @@
-
 /**
  * Bases
  */
@@ -8,19 +7,21 @@
     position: relative;
 
     &::before, &::after {
-        display:block;
+        display: block;
         content: '';
         position: absolute;
     }
 }
+
 @mixin natural-chevron-v-base($thickness, $width, $skew) {
     @include natural-chevron-base();
-    height:$thickness + chevron-decallage($thickness, $width, $skew);
+    height: $thickness + chevron-decallage($thickness, $width, $skew);
     width: $width * 2;
 }
+
 @mixin natural-chevron-h-base($thickness, $width, $skew) {
     @include natural-chevron-base();
-    width:$thickness + chevron-decallage($thickness, $width, $skew) ;
+    width: $thickness + chevron-decallage($thickness, $width, $skew);
     height: $width * 2;
 }
 
@@ -32,27 +33,28 @@
     @include natural-chevron-h-base($thickness, $width, $skew);
     &::before {
         @include natural-parallelogram-top($color, $thickness, $width, $skew);
-        bottom:0;
-        right:chevron-decallage($thickness, $width, $skew) / 2;
+        bottom: 0;
+        right: chevron-decallage($thickness, $width, $skew) / 2;
     }
     &::after {
         @include natural-parallelogram-bottom($color, $thickness, $width, $skew);
-        top:0;
-        right:chevron-decallage($thickness, $width, $skew) / 2;
+        top: 0;
+        right: chevron-decallage($thickness, $width, $skew) / 2;
     }
 }
+
 @mixin natural-chevron-left($color, $thickness, $width, $skew) {
 
     @include natural-chevron-h-base($thickness, $width, $skew);
     &::before {
         @include natural-parallelogram-bottom($color, $thickness, $width, $skew);
-        bottom:0;
-        right:chevron-decallage($thickness, $width, $skew) / 2;
+        bottom: 0;
+        right: chevron-decallage($thickness, $width, $skew) / 2;
     }
     &::after {
         @include natural-parallelogram-top($color, $thickness, $width, $skew);
-        top:0;
-        right:chevron-decallage($thickness, $width, $skew) / 2;
+        top: 0;
+        right: chevron-decallage($thickness, $width, $skew) / 2;
     }
 }
 
@@ -61,29 +63,28 @@
     @include natural-chevron-v-base($thickness, $width, $skew);
     &::before {
         @include natural-parallelogram-left($color, $thickness, $width, $skew);
-        bottom:chevron-decallage($thickness, $width, $skew) / 2;
-        left:0;
+        bottom: chevron-decallage($thickness, $width, $skew) / 2;
+        left: 0;
     }
     &::after {
         @include natural-parallelogram-right($color, $thickness, $width, $skew);
-        bottom:chevron-decallage($thickness, $width, $skew) / 2;
-        right:0;
+        bottom: chevron-decallage($thickness, $width, $skew) / 2;
+        right: 0;
     }
 }
-
 
 @mixin natural-chevron-top($color, $thickness, $width, $skew) {
 
     @include natural-chevron-v-base($thickness, $width, $skew);
     &::before {
         @include natural-parallelogram-right($color, $thickness, $width, $skew);
-        bottom:chevron-decallage($thickness, $width, $skew) / 2;
-        left:0;
+        bottom: chevron-decallage($thickness, $width, $skew) / 2;
+        left: 0;
     }
     &::after {
         @include natural-parallelogram-left($color, $thickness, $width, $skew);
-        bottom:chevron-decallage($thickness, $width, $skew) / 2;
-        right:0;
+        bottom: chevron-decallage($thickness, $width, $skew) / 2;
+        right: 0;
     }
 }
 
