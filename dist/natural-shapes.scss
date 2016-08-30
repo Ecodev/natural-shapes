@@ -1,5 +1,6 @@
 
 // Respect order
+@import "../node_modules/mathsass/dist/_math.scss";
 @import 'functions';
 @import 'shapes/rectangle.scss';
 @import 'shapes/trapezoid.scss';
@@ -14,6 +15,7 @@ $defaultNaturalShapeColor: #0089e0;
 $defaultNaturalBorderColor: #0089e0;
 
 @mixin shape() {
+    content:"";
     box-sizing:content-box;
 }
 

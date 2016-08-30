@@ -1,6 +1,6 @@
 {
   "name": "natural-shapes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "scripts": {
     "prod": "gulp prod",
@@ -18,6 +18,9 @@
     "url": "https://github.com/Ecodev/natural-shapes/issues"
   },
   "homepage": "https://github.com/Ecodev/natural-shapes#readme",
+  "dependencies" : {
+    "mathsass": "^0.9.5"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "bootstrap": "^3.3.7",

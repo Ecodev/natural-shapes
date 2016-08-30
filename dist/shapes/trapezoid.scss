@@ -1,4 +1,4 @@
-@mixin natural-trapezoid-bottom($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
+@mixin natural-trapezoid($color, $baseSize, $ceilingSize, $heightSize, $angle: 0, $assimetry: 0.5) {
     @include shape();
 
     width: $ceilingSize;
@@ -6,59 +6,50 @@
 
     $residualSize: $baseSize - $ceilingSize;
 
-    border-right: $residualSize * (1 - $centerAt) solid transparent;
+    border-right: $residualSize * (1 - $assimetry) solid transparent;
     border-bottom: $heightSize solid $color;
-    border-left: $residualSize * $centerAt solid transparent;
+    border-left: $residualSize * $assimetry solid transparent;
+
+    transform-origin: ($baseSize / 2) 100%;
+    transform:rotate($angle);
 }
 
-@mixin natural-trapezoid-top($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
-    @include shape();
+@mixin natural-trapezoid-bordered($color, $w, $c, $h, $bColor, $b, $angle: 0, $assimetry: 0.5) {
 
-    width: $ceilingSize;
-    height: 0;
+    $extraWidth : $w - $c;
+    $H : $h + $b;
 
-    $residualSize: $baseSize - $ceilingSize;
+    $values : natural-trigonometry-basics($extraWidth, $h, $b, $assimetry);
+    $alpha : map-get($values, alpha);
+    $gamma : map-get($values, gamma);
+    $l : map-get($values, l);
+    $r : map-get($values, r);
 
-    border-right: $residualSize * $centerAt solid transparent;
-    border-top: $heightSize solid $color;
-    border-left: $residualSize * (1 - $centerAt) solid transparent;
-}
+    $W : $w + $l + $r;
 
-@mixin natural-trapezoid-left($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
-    @include shape();
+    // horizontal width between bottom corners and top corners
+    $L : $H / tan($alpha);
+    $R : $H / tan($gamma);
 
-    height: $ceilingSize;
-    width: 0;
+    @if $assimetry == 0 {
+        $L : 0;
+    } @elseif $assimetry == 1 {
+        $R : 0;
+    }
 
-    $residualSize: $baseSize - $ceilingSize;
+    // new ceiling dimension
+    $C : floor($W - $L - $R);
 
-    border-top: $residualSize * $centerAt solid transparent;
-    border-left: $heightSize solid $color;
-    border-bottom: $residualSize * (1 - $centerAt) solid transparent;
-}
+    // Outer trapezoid
+    @include natural-trapezoid($bColor, $W, $C, $H, $angle, $assimetry);
 
-@mixin natural-trapezoid-right($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5) {
-    @include shape();
+    position:relative;
 
-    height: $ceilingSize;
-    width: 0;
-
-    $residualSize: $baseSize - $ceilingSize;
-
-    border-top: $residualSize * (1 - $centerAt) solid transparent;
-    border-right: $heightSize solid $color;
-    border-bottom: $residualSize * $centerAt solid transparent;
-}
-
-@mixin natural-trapezoid($color, $baseSize, $ceilingSize, $heightSize, $centerAt: 0.5, $basePos: 'bottom') {
-    @if $basePos == 'bottom' {
-        @include natural-trapezoid-bottom($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
-    } @else if $basePos == 'top' {
-        @include natural-trapezoid-top($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
-    } @else if $basePos == 'left' {
-        @include natural-trapezoid-left($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
-    } @else if $basePos == 'right' {
-        @include natural-trapezoid-right($color, $baseSize, $ceilingSize, $heightSize, $centerAt);
+    // Inner trapezoid
+    &::before {
+        position:absolute;
+        top: $b;
+        left: -2 * $b * $assimetry + $b;
+        @include natural-trapezoid($color, $w, $c, $h, 0, $assimetry);
     }
 }
-

@@ -1,41 +1,53 @@
-/** Free triangle (isocele by default) */
-@mixin natural-triangle($color, $baseSize, $heightSize, $centerAt: 0.5, $basePos: 'bottom') {
-    @include natural-trapezoid($color, $baseSize, 0, $heightSize, $centerAt, $basePos);
+@mixin natural-triangle($color, $w, $h, $angle: 0, $assimetry: 0.5) {
+    @include natural-trapezoid($color, $w, 0, $h, $angle, $assimetry);
 }
 
-@mixin natural-triangle-bottom($color, $baseSize, $heightSize, $centerAt: 0.5) {
-    @include natural-trapezoid-bottom($color, $baseSize, 0, $heightSize, $centerAt);
+@mixin natural-triangle-equilateral($color, $sideSize, $angle : 0) {
+    @include natural-trapezoid($color, $sideSize, 0, $sideSize * 0.866025403784, 0.5, $angle);
 }
 
-@mixin natural-triangle-top($color, $baseSize, $heightSize, $centerAt: 0.5) {
-    @include natural-trapezoid-top($color, $baseSize, 0, $heightSize, $centerAt);
-}
+@mixin natural-triangle-bordered($color, $w, $h, $bColor, $b, $angle: 0, $assimetry: 0.5) {
 
-@mixin natural-triangle-right($color, $baseSize, $heightSize, $centerAt: 0.5) {
-    @include natural-trapezoid-right($color, $baseSize, 0, $heightSize, $centerAt);
-}
+    $values : natural-trigonometry-basics($w, $h, $b, $assimetry);
+    $alpha : map-get($values, alpha);
+    $gamma : map-get($values, gamma);
+    $l : map-get($values, l);
+    $r : map-get($values, r);
+    $W : map-get($values, W);
 
-@mixin natural-triangle-left($color, $baseSize, $heightSize, $centerAt: 0.5) {
-    @include natural-trapezoid-left($color, $baseSize, 0, $heightSize, $centerAt);
-}
+    // new sizes from the symmetry axe
+    $L : $W * $assimetry;
+    $R : $W * (1 - $assimetry);
 
-/** Triangle equilateral */
-@mixin natural-triangle-equilateral($color, $baseSize, $basePos: 'bottom') {
-    @include natural-trapezoid($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5, $basePos);
-}
+    // new height
+    $H: null;
+    @if ($assimetry > 0) {
+        $H: tan($alpha) * $L;
+    } @else {
+        $H: tan($gamma) * $R;
+    }
 
-@mixin natural-triangle-equilateral-bottom($color, $baseSize) {
-    @include natural-trapezoid-bottom($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
-}
+    $offset : 4 * pow($assimetry - 0.5, 2);
+    @if $assimetry > 0.5 {
+        $offset :  - $r * $offset;
+    } @else {
+        $offset : $l * $offset;
+    }
 
-@mixin natural-triangle-equilateral-top($color, $baseSize) {
-    @include natural-trapezoid-top($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
-}
+    $origin-x: $w * $assimetry + (($l - $b) * $assimetry) + $b;
 
-@mixin natural-triangle-equilateral-left($color, $baseSize) {
-    @include natural-trapezoid-left($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
-}
+    // Outer triangle
+    @include natural-triangle($bColor, $W, $H, 0, $assimetry);
 
-@mixin natural-triangle-equilateral-right($color, $baseSize) {
-    @include natural-trapezoid-right($color, $baseSize, 0, $baseSize * 0.866025403784, 0.5);
+    position:relative;
+    transform-origin: $origin-x 100%;
+    transform: rotate($angle);
+
+    // Inner triangle
+    &::before {
+        position:absolute;
+        left: - $w * $assimetry + $offset;
+        top: floor($H - $h);
+        @include natural-triangle($color, $w, $h, 0, $assimetry);
+    }
 }

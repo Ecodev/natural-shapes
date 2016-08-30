@@ -46,19 +46,37 @@ $color2: #8bdae0;
 }
 
 /**
+ * trapeze
+ */
+
+#trapeze1 {
+    @include natural-trapezoid($color, 150px, 100px, 130px);
+}
+#trapeze2 {
+    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px, 0 , 0);
+}
+#trapeze3 {
+    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px);
+}
+
+#trapeze4 {
+    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px, 0, 1);
+}
+
+/**
  * Triangle
  */
 #triangle1 {
-    @include natural-triangle($color, 100px, 100px);
+    @include natural-triangle($color, 150px, 155px);
 }
 #triangle2 {
-    @include natural-triangle($color, 100px, 100px, 0);
+    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 0, 0);
 }
 #triangle3 {
-    @include natural-triangle($color, 150px, 100px, 1);
+    @include natural-triangle-bordered($color, 150px, 106px, $color2, 30px, 0, 0.5);
 }
 #triangle4 {
-    @include natural-triangle($color, 100px, 100px, 0.25, 'left');
+    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 0, 1);
 }
 
 
