@@ -7,7 +7,7 @@
 /**
  * General
  */
-/* line 12, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 10, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #general1 {
   content: "";
   box-sizing: content-box;
@@ -18,7 +18,7 @@
   border-radius: 100%;
 }
 
-/* line 16, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 14, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #general2 {
   content: "";
   box-sizing: content-box;
@@ -28,7 +28,7 @@
   border: 0 solid "transparent";
 }
 
-/* line 20, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 18, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #general3 {
   content: "";
   box-sizing: content-box;
@@ -41,7 +41,7 @@
   transform: rotate(0);
 }
 
-/* line 24, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 22, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #general4 {
   content: "";
   box-sizing: content-box;
@@ -57,7 +57,7 @@
 /**
  * Circle
  */
-/* line 34, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 32, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle1 {
   content: "";
   box-sizing: content-box;
@@ -68,7 +68,7 @@
   border-radius: 100%;
 }
 
-/* line 37, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 35, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle2 {
   content: "";
   box-sizing: content-box;
@@ -81,7 +81,7 @@
   transform: rotate(0);
 }
 
-/* line 40, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 38, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle3 {
   content: "";
   box-sizing: content-box;
@@ -93,7 +93,7 @@
   transform: rotate(0);
 }
 
-/* line 44, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 42, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle4 {
   content: "";
   box-sizing: content-box;
@@ -111,7 +111,7 @@
 /**
  * trapeze
  */
-/* line 52, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 50, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze1 {
   content: "";
   box-sizing: content-box;
@@ -124,7 +124,7 @@
   transform: rotate(0);
 }
 
-/* line 55, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 53, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze2 {
   content: "";
   box-sizing: content-box;
@@ -154,7 +154,7 @@
   transform: rotate(0);
 }
 
-/* line 58, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 56, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze3 {
   content: "";
   box-sizing: content-box;
@@ -184,7 +184,7 @@
   transform: rotate(0);
 }
 
-/* line 62, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 60, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze4 {
   content: "";
   box-sizing: content-box;
@@ -217,7 +217,7 @@
 /**
  * Triangle
  */
-/* line 69, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 67, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle1 {
   content: "";
   box-sizing: content-box;
@@ -230,7 +230,7 @@
   transform: rotate(0);
 }
 
-/* line 72, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 70, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle2 {
   content: "";
   box-sizing: content-box;
@@ -262,7 +262,7 @@
   transform: rotate(0);
 }
 
-/* line 75, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 73, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle3 {
   content: "";
   box-sizing: content-box;
@@ -294,7 +294,7 @@
   transform: rotate(0);
 }
 
-/* line 78, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 76, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle4 {
   content: "";
   box-sizing: content-box;
@@ -329,7 +329,7 @@
 /**
  * Parallelogram
  */
-/* line 86, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 84, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram1 {
   content: "";
   box-sizing: content-box;
@@ -340,7 +340,7 @@
   transform: skew(15deg);
 }
 
-/* line 90, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 88, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram2 {
   content: "";
   box-sizing: content-box;
@@ -351,7 +351,7 @@
   transform: skew(0, 15deg);
 }
 
-/* line 94, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 92, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram3 {
   content: "";
   box-sizing: content-box;
@@ -362,7 +362,7 @@
   transform: skew(-15deg);
 }
 
-/* line 98, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 96, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram4 {
   content: "";
   box-sizing: content-box;
@@ -376,7 +376,7 @@
 /**
  * chevron
  */
-/* line 106, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 104, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #chevron1 {
   content: "";
   box-sizing: content-box;
@@ -418,7 +418,7 @@
   right: 12.58649px;
 }
 
-/* line 110, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 108, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #chevron2 {
   content: "";
   box-sizing: content-box;
@@ -460,7 +460,7 @@
   right: 12.58649px;
 }
 
-/* line 114, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 112, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #chevron3 {
   content: "";
   box-sizing: content-box;
@@ -502,7 +502,7 @@
   right: 0;
 }
 
-/* line 118, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 116, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #chevron4 {
   content: "";
   box-sizing: content-box;
@@ -547,7 +547,7 @@
 /**
  * arrow
  */
-/* line 125, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 123, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #arrow1 {
   content: "";
   box-sizing: content-box;
@@ -562,7 +562,7 @@
   transform-origin: 1.5em 1.5em;
 }
 
-/* line 129, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 127, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #arrow2 {
   content: "";
   box-sizing: content-box;
@@ -577,7 +577,7 @@
   transform-origin: 25px 25px;
 }
 
-/* line 133, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 131, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #arrow3 {
   content: "";
   box-sizing: content-box;
@@ -592,7 +592,7 @@
   transform-origin: 25px 25px;
 }
 
-/* line 137, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 135, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #arrow4 {
   content: "";
   box-sizing: content-box;

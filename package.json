@@ -2,6 +2,7 @@
   "name": "natural-shapes",
   "version": "1.2.1",
   "description": "",
+  "main": "dist/_natural-shapes.scss",
   "scripts": {
     "prod": "gulp prod",
     "dev": "gulp dev",
