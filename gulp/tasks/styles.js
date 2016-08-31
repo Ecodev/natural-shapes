@@ -12,17 +12,17 @@ gulp.task('styles', function() {
     var browserSync = require('browser-sync');
     var autoprefixer = require('gulp-autoprefixer');
     var rename = require('gulp-rename');
+    var importer = require('sass-module-importer');
 
     var createSourcemap = !global.isProd || config.styles.prodSourcemap;
     var output = global.isProd ? 'compressed': 'expanded';
-
-    console.log(config.styles.sass);
 
     return gulp.src(config.styles.sass)
                // .pipe(gulpif(createSourcemap, sourcemaps.init()))
                .pipe(sass({
                    sourceComments: !global.isProd,
-                   outputStyle: output
+                   outputStyle: output,
+                   importer: importer()
                }))
                .on('error', handleErrors)
                .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))

@@ -1,6 +1,6 @@
 {
   "name": "natural-shapes",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "scripts": {
     "prod": "gulp prod",
@@ -18,7 +18,7 @@
     "url": "https://github.com/Ecodev/natural-shapes/issues"
   },
   "homepage": "https://github.com/Ecodev/natural-shapes#readme",
-  "dependencies" : {
+  "dependencies": {
     "mathsass": "^0.9.5"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.9",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sass-module-importer": "^1.2.1"
   }
 }
