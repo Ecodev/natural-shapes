@@ -1,55 +1,100 @@
-@mixin natural-trapezoid($color, $baseSize, $ceilingSize, $heightSize, $angle: 0, $assimetry: 0.5) {
+@mixin natural-trapezoid-shape($color, $shapeSize, $ceilingSize, $heightSize, $angle: 0, $assimetry: 0.5) {
+
     @include shape();
 
     width: $ceilingSize;
     height: 0;
 
-    $residualSize: $baseSize - $ceilingSize;
+    $residualSize: $shapeSize - $ceilingSize;
 
     border-right: $residualSize * (1 - $assimetry) solid transparent;
     border-bottom: $heightSize solid $color;
     border-left: $residualSize * $assimetry solid transparent;
 
-    transform-origin: ($baseSize / 2) 100%;
-    transform:rotate($angle);
+    transform-origin: bottom center;
+    transform: rotate($angle);
+}
+
+@mixin natural-trapezoid($color, $w, $c, $h, $angle: 0, $assimetry: 0.5) {
+
+    @include natural-container($w, $h, $angle);
+
+    &::before {
+        @include natural-trapezoid-shape($color, $w, $c, $h, $angle, $assimetry);
+        @if $angle == 0 {
+            top: 0;
+            left: 0;
+        } @else if $angle == 90deg {
+            top: -$h/2 + ($w - $h)/2;
+            left: -$w/2;
+        } @else if $angle == 180deg {
+            top: -$h;
+            left: 0;
+        } @else if $angle == 270deg {
+            top: -$h/2 + ($w - $h)/2;
+            left: $h/2 - ($w - $h)/2;
+        }
+    }
 }
 
 @mixin natural-trapezoid-bordered($color, $w, $c, $h, $bColor, $b, $angle: 0, $assimetry: 0.5) {
 
-    $extraWidth : $w - $c;
-    $H : $h + $b;
+    $extraWidth: $w - $c;
+    $H: $h + $b;
 
-    $values : natural-trigonometry-basics($extraWidth, $h, $b, $assimetry);
-    $alpha : map-get($values, alpha);
-    $gamma : map-get($values, gamma);
-    $l : map-get($values, l);
-    $r : map-get($values, r);
+    $values: natural-trigonometry-basics($extraWidth, $h, $b, $assimetry);
+    $alpha: map-get($values, alpha);
+    $gamma: map-get($values, gamma);
+    $l: map-get($values, l);
+    $r: map-get($values, r);
 
-    $W : $w + $l + $r;
+    $W: $w + $l + $r;
 
     // horizontal width between bottom corners and top corners
-    $L : $H / tan($alpha);
-    $R : $H / tan($gamma);
+    $L: $H / tan($alpha);
+    $R: $H / tan($gamma);
 
     @if $assimetry == 0 {
-        $L : 0;
-    } @elseif $assimetry == 1 {
-        $R : 0;
+        $L: 0;
+    } @else if $assimetry == 1 {
+        $R: 0;
     }
 
     // new ceiling dimension
-    $C : floor($W - $L - $R);
+    $C: floor($W - $L - $R);
+    @include natural-container($W, $H, $angle);
 
-    // Outer trapezoid
-    @include natural-trapezoid($bColor, $W, $C, $H, $angle, $assimetry);
-
-    position:relative;
-
-    // Inner trapezoid
     &::before {
-        position:absolute;
-        top: $b;
-        left: -2 * $b * $assimetry + $b;
-        @include natural-trapezoid($color, $w, $c, $h, 0, $assimetry);
+        @include natural-trapezoid-shape($bColor, $W, $C, $H, $angle, $assimetry);
+        @if $angle == 0 {
+            top: 0;
+            left: 0;
+        } @else if $angle == 90deg {
+            top: -$H/2 + ($W - $H)/2;
+            left: -$W/2;
+        } @else if $angle == 180deg {
+            top: -$H;
+            left: 0;
+        } @else if $angle == 270deg {
+            top: -$H/2 + ($W - $H)/2;
+            left: $H/2 - ($W - $H)/2;
+        }
+    }
+
+    &::after {
+        @include natural-trapezoid-shape($color, $w, $c, $h, $angle, $assimetry);
+        @if $angle == 0 {
+            top: $b;
+            left: $l;
+        } @else if $angle == 90deg {
+            top: -$h/2 + ($w - $h)/2 + $l;
+            left: -$w/2;
+        } @else if $angle == 180deg {
+            top: -$h;
+            left: $r;
+        } @else if $angle == 270deg {
+            top: -$h/2 + ($w - $h)/2 + $r;
+            left: $h/2 - ($w - $h)/2 + $b;
+        }
     }
 }

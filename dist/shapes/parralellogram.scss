@@ -1,27 +1,29 @@
-@mixin natural-parallelogram-bottom($color, $width, $height, $skew) {
-    @include natural-rectangle($color, $width, $height);
-    transform: skew($skew);
+@mixin natural-parallelogram-shape($color, $w, $h, $skew, $angle: 0) {
+    @include natural-rectangle-shape($color, $w, $h);
+    transform: rotate($angle) skew($skew);
 }
 
-@mixin natural-parallelogram-top($color, $width, $height, $skew) {
-    @include natural-rectangle($color, $width, $height);
-    transform: skew(-$skew);
+@mixin natural-parallelogram($color, $w, $h, $skew, $angle: 0) {
+
+    $l: tan($skew) * $h;
+    @include natural-container($w + $l, $h, $angle);
+
+    &::before {
+        @include natural-parallelogram-shape($color, $w, $h, $skew, $angle);
+
+        @if $angle == 0 {
+            top: 0;
+            left: $l;
+        } @else if $angle == 90deg {
+            top: $w / 2 - $h + $l;
+            left: -$w / 2;
+        } @else if $angle == 180deg {
+            top: -$h;
+            left: 0;
+        } @else if $angle == 270deg {
+            top: $w / 2 - $h;
+            left: - ($w / 2 - $h);
+        }
+    }
 }
-
-@mixin natural-parallelogram-left($color, $width, $height, $skew) {
-    @include natural-rectangle($color, $height, $width);
-    transform: skew(0, $skew);
-}
-
-@mixin natural-parallelogram-right($color, $width, $height, $skew) {
-    @include natural-rectangle($color, $height, $width);
-    transform: skew(0, -$skew);
-}
-
-@mixin natural-parallelogram($color, $width, $height, $skewX, $skewY: 0) {
-    @include natural-rectangle($color, $width, $height);
-    transform: skew($skewX, $skewY);
-}
-
-
 

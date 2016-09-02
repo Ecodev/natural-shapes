@@ -1,36 +1,67 @@
-@mixin natural-oval($color, $width, $height, $borderColor:'transparent', $borderWidth:0) {
-    @include natural-rectangle($color, $width, $height, $borderColor, $borderWidth);
-    border-radius: 100%;
+@mixin natural-oval-shape($color, $w, $h, $bColor:transparent, $b:0) {
+    @include natural-rectangle-shape($color, $w, $h, $bColor, $b);
+    border-radius: 99999px;
+    transform-origin: center center;
 }
 
-@mixin natural-circle($color, $diameter, $borderColor:'transparent', $borderWidth:0) {
-    @include natural-oval($color, $diameter, $diameter, $borderColor, $borderWidth);
+@mixin natural-circle-shape($color, $w, $bColor:transparent, $b:0) {
+    @include natural-oval-shape($color, $w, $w, $bColor, $b);
 }
 
-@mixin natural-half-circle($color, $diameter, $borderColor:'transparent', $borderWidth:0, $rotation:0) {
-    @include natural-rectangle($color, $diameter, $diameter/2);
-    border-top-left-radius: $diameter + $borderWidth;
-    border-top-right-radius: $diameter + $borderWidth;
-    transform: rotate($rotation);
+@mixin natural-oval($color, $w, $h, $bColor:transparent, $b:0) {
 
-    @if $borderWidth > 0 {
-        border: $borderWidth solid $borderColor;
-        border-bottom: transparent;
+    @include natural-container($w, $h);
+
+    &::before {
+        @include natural-oval-shape($color, $w, $h, $bColor, $b);
     }
 }
 
-@mixin natural-quarter-circle($color, $diameter, $borderColor:'transparent', $borderWidth:0, $rotation:0) {
-    @include natural-rectangle($color, $diameter/2, $diameter/2);
+@mixin natural-circle($color, $d, $bColor:transparent, $b:0) {
+    @include natural-oval($color, $d, $d, $bColor, $b);
+}
+
+@mixin natural-half-circle-shape($color, $d, $bColor:transparent, $b:0, $angle:0) {
+
+    $D: $d + 2 * $b;
+
+    @include natural-rectangle-shape($color, $d, $d/2);
+    border-top-left-radius: $d + $b;
+    border-top-right-radius: $d + $b;
+    transform: rotate($angle);
+
+    @if $b > 0 {
+        border: $b solid $bColor;
+        border-bottom: transparent;
+    }
+
+}
+
+@mixin natural-half-circle($color, $d, $bColor:transparent, $b:0, $angle:0) {
+
+    $D: $d + 2 * $b;
+
+    @include natural-container($D, $D/2, $angle);
+
+    &::before {
+        @include natural-half-circle-shape($color, $d, $bColor, $b, $angle);
+        top: abs(cos($angle)) * ( - $D/4 + cos($angle) * $D/4);
+        left: abs(sin($angle)) * (- $D/4 - sin($angle) * $D/4);
+    }
+}
+
+@mixin natural-quarter-circle-shape($color, $d, $bColor:transparent, $b:0, $rotation:0) {
+    @include natural-rectangle-shape($color, $d/2, $d/2);
     border-top-left-radius: 100%;
     transform: rotate($rotation);
 
-    @if $borderWidth > 0 {
-        border: $borderWidth solid $borderColor;
+    @if $b > 0 {
+        border: $b solid $bColor;
         border-bottom: transparent;
         border-right: transparent;
     }
-
 }
+
 
 
 

@@ -1,30 +1,54 @@
 @import 'mathsass';
 @import '../dist/_natural-shapes.scss';
 
+.row {
+    margin-bottom:50px;
+}
+
 $color: #0089e0;
-$color1: #0089e0;
+$color1: #a742e0;
 $color2: #8bdae0;
 
 /**
- * General
+ * Rectangle
  */
-#general1 {
-    @include natural-circle($color, 100px);
-}
 
-#general2 {
+#rectangle1 {
     @include natural-rectangle($color, 150px, 100px);
 }
-
-#general3 {
-    @include natural-trapezoid($color, 150px, 75px, 100px);
+#rectangle2 {
+    @include natural-rectangle($color, 150px, 100px, '', 0, 90deg);
+}
+#rectangle3 {
+    @include natural-rectangle($color, 150px, 100px, '', 0, 180deg);
+}
+#rectangle4 {
+    @include natural-rectangle($color, 150px, 100px, '', 0, 270deg);
+}
+#rectangle5 {
+    @include natural-rectangle($color, 150px, 100px, $color2, 30px);
+}
+#rectangle6 {
+    @include natural-rectangle($color, 150px, 100px, $color2, 30px, 90deg);
+}
+#rectangle7 {
+    @include natural-rectangle($color, 150px, 100px, $color2, 30px, 180deg);
+}
+#rectangle8 {
+    @include natural-rectangle($color, 150px, 100px, $color2, 30px, 270deg);
 }
 
-#general4 {
-    @include natural-triangle($color, 100px, 100px);
+
+/**
+ * Square
+ */
+#square1 {
+    @include natural-square($color, 150px);
 }
 
-
+#square2 {
+    @include natural-square($color, 150px, $color2, 30px);
+}
 
 /**
  * Circle
@@ -37,102 +61,181 @@ $color2: #8bdae0;
     @include natural-half-circle($color, 100px);
 }
 #circle3 {
-    @include natural-quarter-circle($color, 100px);
+    @include natural-half-circle($color, 100px, '', 0, 90deg);
+}
+#circle4 {
+    @include natural-half-circle($color, 100px,  '', 0, 180deg);
+}
+#circle5 {
+    @include natural-half-circle($color, 100px,  '', 0, 270deg);
 }
 
-#circle4 {
-    @include natural-quarter-circle($color, 100px, $color2, 30px);
+#circle6 {
+    @include natural-half-circle($color, 100px, $color2, 30px);
 }
+#circle7 {
+    @include natural-half-circle($color, 100px, $color2, 30px, 90deg);
+}
+#circle8 {
+    @include natural-half-circle($color, 100px, $color2, 30px, 180deg);
+}
+#circle9 {
+    @include natural-half-circle($color, 100px, $color2, 30px, 270deg);
+}
+
+
 
 /**
  * trapeze
  */
-
 #trapeze1 {
-    @include natural-trapezoid($color, 150px, 100px, 130px);
+    @include natural-trapezoid($color, 150px, 100px, 100px, 0);
 }
+
 #trapeze2 {
-    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px, 0 , 0);
+    @include natural-trapezoid($color, 150px, 100px, 100px, 90deg);
 }
+
 #trapeze3 {
-    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px);
+    @include natural-trapezoid($color, 150px, 100px, 150px, 270deg);
 }
 
 #trapeze4 {
-    @include natural-trapezoid-bordered($color, 150px, 100px, 100px, $color2, 30px, 0, 1);
+    @include natural-trapezoid($color, 150px, 100px, 100px, 270deg);
+}
+
+#trapeze1b {
+    @include natural-trapezoid-bordered($color, 150px, 50px, 100px, $color2, 30px, 0);
+}
+
+#trapeze2b {
+    @include natural-trapezoid-bordered($color, 150px, 50px, 100px, $color2, 30px, 90deg);
+}
+
+#trapeze3b {
+    @include natural-trapezoid-bordered($color, 150px, 50px, 100px, $color2, 30px, 180deg);
+}
+
+#trapeze4b {
+    @include natural-trapezoid-bordered($color, 150px, 50px, 100px, $color2, 30px, 270deg);
 }
 
 /**
  * Triangle
  */
 #triangle1 {
-    @include natural-triangle($color, 150px, 155px);
-}
-#triangle2 {
-    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 0, 0);
-}
-#triangle3 {
-    @include natural-triangle-bordered($color, 150px, 106px, $color2, 30px, 0, 0.5);
-}
-#triangle4 {
-    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 0, 1);
+    @include natural-triangle($color, 150px, 100px);
 }
 
+#triangle2 {
+    @include natural-triangle($color, 150px, 100px, 90deg);
+}
+
+#triangle3 {
+    @include natural-triangle($color, 150px, 100px, 180deg);
+}
+
+#triangle4 {
+    @include natural-triangle($color, 150px, 100px, 270deg);
+}
+
+#triangle1b {
+    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 0);
+}
+
+#triangle2b {
+    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 90deg);
+}
+
+#triangle3b {
+    @include natural-triangle-bordered($color, 150px, 106px, $color2, 30px, 180deg);
+}
+
+#triangle4b {
+    @include natural-triangle-bordered($color, 150px, 100px, $color2, 30px, 270deg);
+}
 
 /**
  * Parallelogram
  */
 #parralleloram1 {
-    @include natural-parallelogram-bottom($color, 100px, 50px, 15deg);
+    @include natural-parallelogram($color, 150px, 80px, 30deg);
 }
 
 #parralleloram2 {
-    @include natural-parallelogram-left($color, 100px, 50px, 15deg);
+    @include natural-parallelogram($color, 150px, 80px, 30deg, 90deg);
 }
-
 #parralleloram3 {
-    @include natural-parallelogram-top($color, 100px, 50px, 15deg);
+    @include natural-parallelogram($color, 150px, 80px, 30deg, 180deg);
 }
 
 #parralleloram4 {
-    @include natural-parallelogram($color, 50px, 50px, 25deg, 25deg);
+    @include natural-parallelogram($color, 150px, 80px, 30deg, 270deg);
 }
-
 
 /**
  * chevron
  */
 #chevron1 {
-    @include natural-chevron-right($color, 25px, 30px, 40deg);
+    @include natural-chevron($color, 100px, 100px, 50px);
 }
 
 #chevron2 {
-    @include natural-chevron-left($color, 25px, 30px, 40deg);
+    @include natural-chevron($color, 100px, 100px, 50px, 90deg);
 }
 
 #chevron3 {
-    @include natural-chevron-bottom($color, 25px, 30px, 40deg);
+    @include natural-chevron($color, 100px, 100px, 50px, 180deg);
 }
 
 #chevron4 {
-    @include natural-chevron-top($color, 25px, 30px, 40deg);
+    @include natural-chevron($color, 100px, 100px, 50px, 270deg);
 }
 
 /**
  * arrow
  */
 #arrow1 {
-    @include natural-arrow($color, 1em, 3em, 0);
+    @include natural-arrow($color, 100px, 33px, 0);
 }
 
 #arrow2 {
-    @include natural-arrow($color, 20px, 50px, 90deg);
+    @include natural-arrow($color, 100px, 33px, 90deg);
 }
 
 #arrow3 {
-    @include natural-arrow($color, 20px, 50px, 180deg);
+    @include natural-arrow($color, 100px, 33px, 180deg);
 }
 
 #arrow4 {
-    @include natural-arrow($color, 20px, 50px, 270deg);
+    @include natural-arrow($color, 100px, 33px, 270deg);
+}
+
+
+/**
+ * Progress
+ */
+#progress1 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:0);
+}
+#progress2 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:12);
+}
+#progress3 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:25);
+}
+#progress4 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:33);
+}
+#progress5 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:50);
+}
+#progress6 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:66);
+}
+#progress7 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:75);
+}
+#progress8 {
+    @include natural-progress($color, 100px, $color1, $color2, 30px, $percent:100);
 }

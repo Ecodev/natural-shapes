@@ -1,90 +1,93 @@
 /**
  * Bases
  */
-@mixin natural-chevron-base() {
-    @include shape();
 
-    position: relative;
-
-    &::before, &::after {
-        display: block;
-        content: '';
-        position: absolute;
-    }
+@mixin natural-chevron-v-base($thickness, $w, $skew) {
+    height: $thickness + tan($skew) * $w;
+    width: $w * 2;
 }
 
-@mixin natural-chevron-v-base($thickness, $width, $skew) {
-    @include natural-chevron-base();
-    height: $thickness + chevron-decallage($thickness, $width, $skew);
-    width: $width * 2;
-}
-
-@mixin natural-chevron-h-base($thickness, $width, $skew) {
-    @include natural-chevron-base();
-    width: $thickness + chevron-decallage($thickness, $width, $skew);
-    height: $width * 2;
+@mixin natural-chevron-h-base($thickness, $w, $skew) {
+    width: $thickness + tan($skew) * $w;
+    height: $w * 2;
 }
 
 /**
  * Chevrons
  */
-@mixin natural-chevron-right($color, $thickness, $width, $skew) {
 
-    @include natural-chevron-h-base($thickness, $width, $skew);
+@mixin natural-chevron-right($color, $w, $h, $b, $skew) {
+
     &::before {
-        @include natural-parallelogram-top($color, $thickness, $width, $skew);
-        bottom: 0;
-        right: chevron-decallage($thickness, $width, $skew) / 2;
-    }
-    &::after {
-        @include natural-parallelogram-bottom($color, $thickness, $width, $skew);
-        top: 0;
-        right: chevron-decallage($thickness, $width, $skew) / 2;
-    }
-}
-
-@mixin natural-chevron-left($color, $thickness, $width, $skew) {
-
-    @include natural-chevron-h-base($thickness, $width, $skew);
-    &::before {
-        @include natural-parallelogram-bottom($color, $thickness, $width, $skew);
-        bottom: 0;
-        right: chevron-decallage($thickness, $width, $skew) / 2;
-    }
-    &::after {
-        @include natural-parallelogram-top($color, $thickness, $width, $skew);
-        top: 0;
-        right: chevron-decallage($thickness, $width, $skew) / 2;
-    }
-}
-
-@mixin natural-chevron-bottom($color, $thickness, $width, $skew) {
-
-    @include natural-chevron-v-base($thickness, $width, $skew);
-    &::before {
-        @include natural-parallelogram-left($color, $thickness, $width, $skew);
-        bottom: chevron-decallage($thickness, $width, $skew) / 2;
+        @include natural-parallelogram-shape($color, $b, $h/2, -$skew);
+        top: $h / 2;
         left: 0;
     }
     &::after {
-        @include natural-parallelogram-right($color, $thickness, $width, $skew);
-        bottom: chevron-decallage($thickness, $width, $skew) / 2;
-        right: 0;
+        @include natural-parallelogram-shape($color, $b, $h/2, $skew);
+        top: 0;
+        left: $w - $b;
     }
+
 }
 
-@mixin natural-chevron-top($color, $thickness, $width, $skew) {
+@mixin natural-chevron-bottom($color, $w, $h, $b, $skew) {
 
-    @include natural-chevron-v-base($thickness, $width, $skew);
     &::before {
-        @include natural-parallelogram-right($color, $thickness, $width, $skew);
-        bottom: chevron-decallage($thickness, $width, $skew) / 2;
-        left: 0;
+        @include natural-parallelogram-shape($color, $b, $h/2, -$skew, 90deg);
+        top: $b/2 - $h/2;
+        left: ceil(- $b/2);
     }
     &::after {
-        @include natural-parallelogram-left($color, $thickness, $width, $skew);
-        bottom: chevron-decallage($thickness, $width, $skew) / 2;
-        right: 0;
+        @include natural-parallelogram-shape($color, $b, $h/2, $skew, 90deg);
+        top: $b/2 - $h/2 + tan($skew) * $h/2;
+        left: $h/2 - $b/2;
     }
 }
 
+@mixin natural-chevron-left($color, $w, $h, $b, $skew) {
+
+    &::before {
+        @include natural-parallelogram-shape($color, $b, $h/2, -$skew, 180deg);
+        top: -$h / 2;
+        left: $w - $b;
+    }
+    &::after {
+        @include natural-parallelogram-shape($color, $b, $h/2, $skew, 180deg);
+        top: 0;
+        left: 0;
+    }
+}
+
+@mixin natural-chevron-top($color, $w, $h, $b, $skew) {
+
+    @debug $w, $h, $b;
+    &::before {
+        @include natural-parallelogram-shape($color, $b, $h/2, -$skew, 270deg);
+        top: $w - $h/2 - $b/2;
+        left: $h - $b/2;
+    }
+    &::after {
+        @include natural-parallelogram-shape($color, $b, $h/2, $skew, 270deg);
+        top: $b/2 - $h/2;
+        left: $h/2 - $b/2;
+    }
+}
+
+@mixin natural-chevron($color, $w, $h, $b, $angle: 0) {
+
+    @include natural-container($w, $h, $angle);
+
+    $skew: 90deg - rad-to-deg(atan(($h/2) / ($w - $b)));
+
+    @if $angle == 0 {
+        @include natural-chevron-right($color, $w, $h, $b, $skew);
+    } @else if $angle == 90deg {
+        @include natural-chevron-bottom($color, $w, $h, $b, $skew);
+    } @else if $angle == 180deg {
+        @include natural-chevron-left($color, $w, $h, $b, $skew);
+    } @else if $angle == 270deg {
+        @include natural-chevron-top($color, $w, $h, $b, $skew);
+    }
+
+}

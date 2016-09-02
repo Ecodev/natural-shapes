@@ -1,3 +1,7 @@
+@mixin natural-triangle-shape($color, $w, $h, $angle: 0, $assimetry: 0.5) {
+    @include natural-trapezoid-shape($color, $w, 0, $h, $angle, $assimetry);
+}
+
 @mixin natural-triangle($color, $w, $h, $angle: 0, $assimetry: 0.5) {
     @include natural-trapezoid($color, $w, 0, $h, $angle, $assimetry);
 }
@@ -8,16 +12,16 @@
 
 @mixin natural-triangle-bordered($color, $w, $h, $bColor, $b, $angle: 0, $assimetry: 0.5) {
 
-    $values : natural-trigonometry-basics($w, $h, $b, $assimetry);
-    $alpha : map-get($values, alpha);
-    $gamma : map-get($values, gamma);
-    $l : map-get($values, l);
-    $r : map-get($values, r);
-    $W : map-get($values, W);
+    $values: natural-trigonometry-basics($w, $h, $b, $assimetry);
+    $alpha: map-get($values, alpha);
+    $gamma: map-get($values, gamma);
+    $l: map-get($values, l);
+    $r: map-get($values, r);
+    $W: map-get($values, W);
 
     // new sizes from the symmetry axe
-    $L : $W * $assimetry;
-    $R : $W * (1 - $assimetry);
+    $L: $W * $assimetry;
+    $R: $W * (1 - $assimetry);
 
     // new height
     $H: null;
@@ -27,27 +31,41 @@
         $H: tan($gamma) * $R;
     }
 
-    $offset : 4 * pow($assimetry - 0.5, 2);
-    @if $assimetry > 0.5 {
-        $offset :  - $r * $offset;
-    } @else {
-        $offset : $l * $offset;
-    }
-
     $origin-x: $w * $assimetry + (($l - $b) * $assimetry) + $b;
 
-    // Outer triangle
-    @include natural-triangle($bColor, $W, $H, 0, $assimetry);
+    @include natural-container($W, $H, $angle);
 
-    position:relative;
-    transform-origin: $origin-x 100%;
-    transform: rotate($angle);
-
-    // Inner triangle
     &::before {
-        position:absolute;
-        left: - $w * $assimetry + $offset;
-        top: floor($H - $h);
-        @include natural-triangle($color, $w, $h, 0, $assimetry);
+        @include natural-triangle-shape($bColor, $W, $H, $angle, $assimetry);
+        @if $angle == 0 {
+            top: 0;
+            left: 0;
+        } @else if $angle == 90deg {
+            top: -$H/2 + ($W - $H)/2;
+            left: -$W/2;
+        } @else if $angle == 180deg {
+            top: -$H;
+            left: 0;
+        } @else if $angle == 270deg {
+            top: -$H/2 + ($W - $H)/2;
+            left: ceil($H/2 - ($W - $H)/2);
+        }
+    }
+
+    &::after {
+        @include natural-triangle-shape($color, $w, $h, $angle, $assimetry);
+        @if $angle == 0 {
+            top: $H - $h;
+            left: $l;
+        } @else if $angle == 90deg {
+            top: -$h/2 + ($w - $h)/2 + $l;
+            left: -$w/2;
+        } @else if $angle == 180deg {
+            top: -$h;
+            left: $r;
+        } @else if $angle == 270deg {
+            top: -$h/2 + ($w - $h)/2 + $r;
+            left: $h/2 - ($w - $h)/2 + $H - $h;
+        }
     }
 }

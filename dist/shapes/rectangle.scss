@@ -1,11 +1,46 @@
-@mixin natural-rectangle($color, $width, $height, $borderColor:'transparent', $borderWidth:0) {
+@mixin natural-rectangle-shape($color, $w, $h, $bColor: transparent, $b: 0, $angle: 0) {
     @include shape();
-    width: $width;
-    height: $height;
+    width: $w;
+    height: $h;
     background: $color;
-    border: $borderWidth solid $borderColor;
+    border: $b solid $bColor;
+    transform: rotate($angle);
+    transform-origin: bottom center;
 }
 
-@mixin natural-square($color, $size, $borderColor:'transparent', $borderWidth:0) {
-    @include natural-rectangle($color, $size, $size, $borderColor, $borderWidth);
+@mixin natural-rectangle($color, $w, $h, $bColor: transparent, $b: 0, $angle: 0) {
+
+    $W: $w + 2 * $b;
+    $H: $h + 2 * $b;
+
+    @include natural-container($W, $H, $angle);
+
+    &::before {
+        @include natural-rectangle-shape($color, $w, $h, $bColor, $b, $angle);
+
+        @if $angle == 0 {
+            top: 0;
+            left: 0;
+        } @else if $angle == 90deg {
+            top: $W / 2 - $H;
+            left: -$W / 2;
+        } @else if $angle == 180deg {
+            top: -$H;
+            left: 0;
+        } @else if $angle == 270deg {
+            top: $W / 2 - $H;
+            left: - ($W / 2 - $H);
+        }
+    }
+}
+
+@mixin natural-square($color, $w, $bColor:transparent, $b: 0) {
+
+    $W: $w + 2 * $b;
+    @include natural-container($W, $W);
+
+    &::before {
+        @include natural-rectangle-shape($color, $w, $w, $bColor, $b);
+    }
+
 }

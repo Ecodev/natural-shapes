@@ -1,12 +1,46 @@
-@mixin natural-arrow($color, $thickness, $width, $angle) {
+@mixin natural-arrow-shape($color, $w, $b, $angle) {
 
-    @include natural-square('transparent', $width);
+    @include natural-rectangle-shape(transparent, $w, $w);
 
     box-sizing: border-box;
 
-    border-top: $thickness solid $color;
-    border-right: $thickness solid $color;
+    border-top: $b solid $color;
+    border-right: $b solid $color;
 
-    transform: rotate($angle - 45deg);
-    transform-origin: ($width/2) ($width/2); // center of rotation on the center of the inside edge of the arrow
+    transform: rotate($angle);
+    transform-origin: top right;
+
+}
+
+@mixin natural-arrow($color, $h, $b, $angle) {
+
+    $angle2: $angle + 45deg;
+
+    $l: sin(45deg) * $b;
+    $c: sin(45deg) * $h;
+
+    $W: $h/2 + $l;
+
+    @include natural-container($W, $h, $angle);
+    overflow: hidden;
+
+    &::before {
+        @include natural-arrow-shape($color, $c, $b, $angle2);
+
+        @if $angle == 0 {
+            top: $h/2;
+            right: 0;
+        } @else if $angle == 90deg {
+            top: $W;
+            right: $h/2;
+        } @else if $angle == 180deg {
+            top: $h/2;
+            right: $W;
+        } @else if $angle == 270deg {
+            top: 0;
+            right: $h/2;
+        }
+
+    }
+
 }

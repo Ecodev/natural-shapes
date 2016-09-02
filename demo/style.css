@@ -4,605 +4,1970 @@
 /**
  * Chevrons
  */
-/**
- * General
- */
-/* line 10, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#general1 {
-  content: "";
-  box-sizing: content-box;
-  width: 100px;
-  height: 100px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  border-radius: 100%;
+/* line 4, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+.row {
+  margin-bottom: 50px;
 }
 
-/* line 14, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#general2 {
+/**
+ * Rectangle
+ */
+/* line 16, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 150px;
   height: 100px;
   background: #0089e0;
-  border: 0 solid "transparent";
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  top: 0;
+  left: 0;
 }
 
-/* line 18, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#general3 {
+/* line 19, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle2::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 75px;
-  height: 0;
-  border-right: 37.5px solid transparent;
-  border-bottom: 100px solid #0089e0;
-  border-left: 37.5px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "";
+  transform: rotate(90deg);
+  transform-origin: bottom center;
+  top: -25px;
+  left: -75px;
 }
 
 /* line 22, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#general4 {
+#rectangle3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle3::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 0;
-  height: 0;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid #0089e0;
-  border-left: 50px solid transparent;
-  transform-origin: 50px 100%;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "";
+  transform: rotate(180deg);
+  transform-origin: bottom center;
+  top: -100px;
+  left: 0;
+}
+
+/* line 25, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 0 solid "";
+  transform: rotate(270deg);
+  transform-origin: bottom center;
+  top: -25px;
+  left: 25px;
+}
+
+/* line 28, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 210px;
+  height: 160px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle5::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
   transform: rotate(0);
+  transform-origin: bottom center;
+  top: 0;
+  left: 0;
+}
+
+/* line 31, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle6 {
+  position: relative;
+  box-sizing: border-box;
+  width: 160px;
+  height: 210px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle6::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(90deg);
+  transform-origin: bottom center;
+  top: -55px;
+  left: -105px;
+}
+
+/* line 34, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle7 {
+  position: relative;
+  box-sizing: border-box;
+  width: 210px;
+  height: 160px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle7::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(180deg);
+  transform-origin: bottom center;
+  top: -160px;
+  left: 0;
+}
+
+/* line 37, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#rectangle8 {
+  position: relative;
+  box-sizing: border-box;
+  width: 160px;
+  height: 210px;
+}
+
+/* line 18, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#rectangle8::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(270deg);
+  transform-origin: bottom center;
+  top: -55px;
+  left: 55px;
+}
+
+/**
+ * Square
+ */
+/* line 45, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#square1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+}
+
+/* line 42, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#square1::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+}
+
+/* line 49, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#square2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 210px;
+  height: 210px;
+}
+
+/* line 42, /sites/_libraries/natural-shapes.lan/dist/shapes/rectangle.scss */
+#square2::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
 }
 
 /**
  * Circle
  */
-/* line 32, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 57, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 15, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 100px;
   height: 100px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  border-radius: 100%;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
 }
 
-/* line 35, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 60, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 50px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle2::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 100px;
   height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   transform: rotate(0);
+  top: 0px;
+  left: 0px;
 }
 
-/* line 38, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 63, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #circle3 {
-  content: "";
-  box-sizing: content-box;
+  position: relative;
+  box-sizing: border-box;
   width: 50px;
-  height: 50px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  border-top-left-radius: 100%;
-  transform: rotate(0);
+  height: 100px;
 }
 
-/* line 42, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#circle4 {
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle3::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 50px;
+  position: absolute;
+  width: 100px;
   height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  border-top-left-radius: 100%;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform: rotate(90deg);
+  top: 0px;
+  left: -50px;
+}
+
+/* line 66, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 50px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform: rotate(180deg);
+  top: -50px;
+  left: 0px;
+}
+
+/* line 69, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 50px;
+  height: 100px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle5::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform: rotate(270deg);
+  top: 0px;
+  left: 0px;
+}
+
+/* line 73, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle6 {
+  position: relative;
+  box-sizing: border-box;
+  width: 160px;
+  height: 80px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle6::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
   transform: rotate(0);
   border: 30px solid #8bdae0;
   border-bottom: transparent;
-  border-right: transparent;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 76, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle7 {
+  position: relative;
+  box-sizing: border-box;
+  width: 80px;
+  height: 160px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle7::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  transform: rotate(90deg);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  top: 0px;
+  left: -80px;
+}
+
+/* line 79, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle8 {
+  position: relative;
+  box-sizing: border-box;
+  width: 160px;
+  height: 80px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle8::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  transform: rotate(180deg);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  top: -80px;
+  left: 0px;
+}
+
+/* line 82, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#circle9 {
+  position: relative;
+  box-sizing: border-box;
+  width: 80px;
+  height: 160px;
+}
+
+/* line 46, /sites/_libraries/natural-shapes.lan/dist/shapes/circle.scss */
+#circle9::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  transform: rotate(270deg);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  top: 0px;
+  left: 0px;
 }
 
 /**
  * trapeze
  */
-/* line 50, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 91, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 100px;
   height: 0;
   border-right: 25px solid transparent;
-  border-bottom: 130px solid #0089e0;
+  border-bottom: 100px solid #0089e0;
   border-left: 25px solid transparent;
-  transform-origin: 75px 100%;
+  transform-origin: bottom center;
   transform: rotate(0);
+  top: 0;
+  left: 0;
 }
 
-/* line 53, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 95, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #trapeze2 {
-  content: "";
-  box-sizing: content-box;
-  width: 148px;
-  height: 0;
-  border-right: 65.54102px solid transparent;
-  border-bottom: 130px solid #8bdae0;
-  border-left: 0px solid transparent;
-  transform-origin: 106.77051px 100%;
-  transform: rotate(0);
   position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
 }
 
-/* line 49, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
 #trapeze2::before {
-  position: absolute;
-  top: 30px;
-  left: 30px;
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 100px;
+  height: 0;
+  border-right: 25px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 25px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: -25px;
+  left: -75px;
+}
+
+/* line 99, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze3::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 0;
+  border-right: 25px solid transparent;
+  border-bottom: 150px solid #0089e0;
+  border-left: 25px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: -75px;
+  left: 75px;
+}
+
+/* line 103, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 0;
+  border-right: 25px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 25px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: -25px;
+  left: 25px;
+}
+
+/* line 107, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze1b {
+  position: relative;
+  box-sizing: border-box;
+  width: 217.08204px;
+  height: 130px;
+}
+
+/* line 67, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze1b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 87px;
+  height: 0;
+  border-right: 65.04102px solid transparent;
+  border-bottom: 130px solid #8bdae0;
+  border-left: 65.04102px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(0);
+  top: 0;
+  left: 0;
+}
+
+/* line 84, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze1b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
   height: 0;
   border-right: 50px solid transparent;
   border-bottom: 100px solid #0089e0;
-  border-left: 0px solid transparent;
-  transform-origin: 75px 100%;
+  border-left: 50px solid transparent;
+  transform-origin: bottom center;
   transform: rotate(0);
-}
-
-/* line 56, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#trapeze3 {
-  content: "";
-  box-sizing: content-box;
-  width: 146px;
-  height: 0;
-  border-right: 32.92329px solid transparent;
-  border-bottom: 130px solid #8bdae0;
-  border-left: 32.92329px solid transparent;
-  transform-origin: 105.92329px 100%;
-  transform: rotate(0);
-  position: relative;
-}
-
-/* line 49, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
-#trapeze3::before {
-  position: absolute;
   top: 30px;
-  left: 0px;
-  content: "";
-  box-sizing: content-box;
-  width: 100px;
-  height: 0;
-  border-right: 25px solid transparent;
-  border-bottom: 100px solid #0089e0;
-  border-left: 25px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
+  left: 33.54102px;
 }
 
-/* line 60, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#trapeze4 {
-  content: "";
-  box-sizing: content-box;
-  width: 148px;
-  height: 0;
-  border-right: 0px solid transparent;
-  border-bottom: 130px solid #8bdae0;
-  border-left: 65.54102px solid transparent;
-  transform-origin: 106.77051px 100%;
-  transform: rotate(0);
+/* line 111, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze2b {
   position: relative;
+  box-sizing: border-box;
+  width: 130px;
+  height: 217.08204px;
 }
 
-/* line 49, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
-#trapeze4::before {
-  position: absolute;
-  top: 30px;
-  left: -30px;
+/* line 67, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze2b::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 100px;
+  position: absolute;
+  width: 87px;
   height: 0;
-  border-right: 0px solid transparent;
+  border-right: 65.04102px solid transparent;
+  border-bottom: 130px solid #8bdae0;
+  border-left: 65.04102px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: -21.45898px;
+  left: -108.54102px;
+}
+
+/* line 84, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze2b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 0;
+  border-right: 50px solid transparent;
   border-bottom: 100px solid #0089e0;
   border-left: 50px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: 8.54102px;
+  left: -75px;
+}
+
+/* line 115, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze3b {
+  position: relative;
+  box-sizing: border-box;
+  width: 217.08204px;
+  height: 130px;
+}
+
+/* line 67, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze3b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 87px;
+  height: 0;
+  border-right: 65.04102px solid transparent;
+  border-bottom: 130px solid #8bdae0;
+  border-left: 65.04102px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  top: -130px;
+  left: 0;
+}
+
+/* line 84, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze3b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 50px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  top: -100px;
+  left: 33.54102px;
+}
+
+/* line 119, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#trapeze4b {
+  position: relative;
+  box-sizing: border-box;
+  width: 130px;
+  height: 217.08204px;
+}
+
+/* line 67, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze4b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 87px;
+  height: 0;
+  border-right: 65.04102px solid transparent;
+  border-bottom: 130px solid #8bdae0;
+  border-left: 65.04102px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: -21.45898px;
+  left: 21.45898px;
+}
+
+/* line 84, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#trapeze4b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 50px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: 8.54102px;
+  left: 55px;
 }
 
 /**
  * Triangle
  */
-/* line 67, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 126, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #triangle1 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#triangle1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 0;
   height: 0;
   border-right: 75px solid transparent;
-  border-bottom: 155px solid #0089e0;
-  border-left: 75px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
-}
-
-/* line 70, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#triangle2 {
-  content: "";
-  box-sizing: content-box;
-  width: 0;
-  height: 0;
-  border-right: 234.08327px solid transparent;
-  border-bottom: 156.05551px solid #8bdae0;
-  border-left: 0px solid transparent;
-  transform-origin: 117.04163px 100%;
-  transform: rotate(0);
-  position: relative;
-  transform-origin: 30px 100%;
-  transform: rotate(0);
-}
-
-/* line 47, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
-#triangle2::before {
-  position: absolute;
-  left: 30px;
-  top: 56px;
-  content: "";
-  box-sizing: content-box;
-  width: 0;
-  height: 0;
-  border-right: 150px solid transparent;
   border-bottom: 100px solid #0089e0;
-  border-left: 0px solid transparent;
-  transform-origin: 75px 100%;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
   transform: rotate(0);
+  top: 0;
+  left: 0;
 }
 
-/* line 73, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#triangle3 {
+/* line 130, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#triangle2::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: -25px;
+  left: -75px;
+}
+
+/* line 134, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#triangle3::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  top: -100px;
+  left: 0;
+}
+
+/* line 138, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 150px;
+}
+
+/* line 22, /sites/_libraries/natural-shapes.lan/dist/shapes/trapezoid.scss */
+#triangle4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: -25px;
+  left: 25px;
+}
+
+/* line 142, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle1b {
+  position: relative;
+  box-sizing: border-box;
+  width: 225px;
+  height: 150px;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle1b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 112.5px solid transparent;
+  border-bottom: 150px solid #8bdae0;
+  border-left: 112.5px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(0);
+  top: 0;
+  left: 0;
+}
+
+/* line 55, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle1b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(0);
+  top: 50px;
+  left: 37.5px;
+}
+
+/* line 146, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle2b {
+  position: relative;
+  box-sizing: border-box;
+  width: 150px;
+  height: 225px;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle2b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 112.5px solid transparent;
+  border-bottom: 150px solid #8bdae0;
+  border-left: 112.5px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: -37.5px;
+  left: -112.5px;
+}
+
+/* line 55, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle2b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
+  border-bottom: 100px solid #0089e0;
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  top: 12.5px;
+  left: -75px;
+}
+
+/* line 150, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle3b {
+  position: relative;
+  box-sizing: border-box;
+  width: 223.49995px;
+  height: 157.93997px;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle3b::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
   width: 0;
   height: 0;
   border-right: 111.74998px solid transparent;
   border-bottom: 157.93997px solid #8bdae0;
   border-left: 111.74998px solid transparent;
-  transform-origin: 111.74998px 100%;
-  transform: rotate(0);
-  position: relative;
-  transform-origin: 108.37499px 100%;
-  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  top: -157.93997px;
+  left: 0;
 }
 
-/* line 47, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
-#triangle3::before {
-  position: absolute;
-  left: -75px;
-  top: 51px;
+/* line 55, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle3b::after {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 0;
   height: 0;
   border-right: 75px solid transparent;
   border-bottom: 106px solid #0089e0;
   border-left: 75px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(180deg);
+  top: -106px;
+  left: 36.74998px;
 }
 
-/* line 76, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#triangle4 {
-  content: "";
-  box-sizing: content-box;
-  width: 0;
-  height: 0;
-  border-right: 0px solid transparent;
-  border-bottom: 156.05551px solid #8bdae0;
-  border-left: 234.08327px solid transparent;
-  transform-origin: 117.04163px 100%;
-  transform: rotate(0);
+/* line 154, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#triangle4b {
   position: relative;
-  transform-origin: 204.08327px 100%;
-  transform: rotate(0);
+  box-sizing: border-box;
+  width: 150px;
+  height: 225px;
 }
 
-/* line 47, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
-#triangle4::before {
-  position: absolute;
-  left: -180px;
-  top: 56px;
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle4b::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
   width: 0;
   height: 0;
-  border-right: 0px solid transparent;
+  border-right: 112.5px solid transparent;
+  border-bottom: 150px solid #8bdae0;
+  border-left: 112.5px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: -37.5px;
+  left: 38px;
+}
+
+/* line 55, /sites/_libraries/natural-shapes.lan/dist/shapes/triangle.scss */
+#triangle4b::after {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 75px solid transparent;
   border-bottom: 100px solid #0089e0;
-  border-left: 150px solid transparent;
-  transform-origin: 75px 100%;
-  transform: rotate(0);
+  border-left: 75px solid transparent;
+  transform-origin: bottom center;
+  transform: rotate(270deg);
+  top: 12.5px;
+  left: 75px;
 }
 
 /**
  * Parallelogram
  */
-/* line 84, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 161, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram1 {
-  content: "";
-  box-sizing: content-box;
-  width: 100px;
-  height: 50px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(15deg);
+  position: relative;
+  box-sizing: border-box;
+  width: 196.18802px;
+  height: 80px;
 }
 
-/* line 88, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/parralellogram.scss */
+#parralleloram1::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(0) skew(30deg);
+  top: 0;
+  left: 46.18802px;
+}
+
+/* line 165, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram2 {
-  content: "";
-  box-sizing: content-box;
-  width: 50px;
-  height: 100px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(0, 15deg);
+  position: relative;
+  box-sizing: border-box;
+  width: 80px;
+  height: 196.18802px;
 }
 
-/* line 92, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/parralellogram.scss */
+#parralleloram2::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(90deg) skew(30deg);
+  top: 41.18802px;
+  left: -75px;
+}
+
+/* line 168, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #parralleloram3 {
-  content: "";
-  box-sizing: content-box;
-  width: 100px;
-  height: 50px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(-15deg);
+  position: relative;
+  box-sizing: border-box;
+  width: 196.18802px;
+  height: 80px;
 }
 
-/* line 96, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#parralleloram4 {
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/parralellogram.scss */
+#parralleloram3::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 50px;
-  height: 50px;
+  position: absolute;
+  width: 150px;
+  height: 80px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(25deg, 25deg);
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(180deg) skew(30deg);
+  top: -80px;
+  left: 0;
+}
+
+/* line 172, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#parralleloram4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 80px;
+  height: 196.18802px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/parralellogram.scss */
+#parralleloram4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(270deg) skew(30deg);
+  top: -5px;
+  left: 5px;
 }
 
 /**
  * chevron
  */
-/* line 104, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 179, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #chevron1 {
-  content: "";
-  box-sizing: content-box;
   position: relative;
-  width: 50.17299px;
-  height: 60px;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
 }
 
-/* line 9, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
-#chevron1::before, #chevron1::after {
-  display: block;
-  content: '';
-  position: absolute;
-}
-
-/* line 34, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 21, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 25px;
-  height: 30px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(-40deg);
-  bottom: 0;
-  right: 12.58649px;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(0) skew(-45deg);
+  top: 50px;
+  left: 0;
 }
 
-/* line 39, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 26, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron1::after {
   content: "";
-  box-sizing: content-box;
-  width: 25px;
-  height: 30px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(40deg);
-  top: 0;
-  right: 12.58649px;
-}
-
-/* line 108, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#chevron2 {
-  content: "";
-  box-sizing: content-box;
-  position: relative;
-  width: 50.17299px;
-  height: 60px;
-}
-
-/* line 9, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
-#chevron2::before, #chevron2::after {
   display: block;
-  content: '';
+  box-sizing: content-box;
   position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(0) skew(45deg);
+  top: 0;
+  left: 50px;
 }
 
-/* line 49, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 183, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron2 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 36, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron2::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 25px;
-  height: 30px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(40deg);
-  bottom: 0;
-  right: 12.58649px;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(90deg) skew(-45deg);
+  top: -25px;
+  left: -25px;
 }
 
-/* line 54, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 41, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron2::after {
   content: "";
-  box-sizing: content-box;
-  width: 25px;
-  height: 30px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(-40deg);
-  top: 0;
-  right: 12.58649px;
-}
-
-/* line 112, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#chevron3 {
-  content: "";
-  box-sizing: content-box;
-  position: relative;
-  height: 50.17299px;
-  width: 60px;
-}
-
-/* line 9, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
-#chevron3::before, #chevron3::after {
   display: block;
-  content: '';
+  box-sizing: content-box;
   position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(90deg) skew(45deg);
+  top: 25px;
+  left: 25px;
 }
 
-/* line 64, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 187, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 50, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron3::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 30px;
-  height: 25px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(0, 40deg);
-  bottom: 12.58649px;
-  left: 0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(180deg) skew(-45deg);
+  top: -50px;
+  left: 50px;
 }
 
-/* line 69, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 55, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron3::after {
   content: "";
-  box-sizing: content-box;
-  width: 30px;
-  height: 25px;
-  background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(0, -40deg);
-  bottom: 12.58649px;
-  right: 0;
-}
-
-/* line 116, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#chevron4 {
-  content: "";
-  box-sizing: content-box;
-  position: relative;
-  height: 50.17299px;
-  width: 60px;
-}
-
-/* line 9, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
-#chevron4::before, #chevron4::after {
   display: block;
-  content: '';
-  position: absolute;
-}
-
-/* line 79, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
-#chevron4::before {
-  content: "";
   box-sizing: content-box;
-  width: 30px;
-  height: 25px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(0, -40deg);
-  bottom: 12.58649px;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(180deg) skew(45deg);
+  top: 0;
   left: 0;
 }
 
-/* line 84, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+/* line 191, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#chevron4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 65, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
+#chevron4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #0089e0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(270deg) skew(-45deg);
+  top: 25px;
+  left: 75px;
+}
+
+/* line 70, /sites/_libraries/natural-shapes.lan/dist/shapes/chevron.scss */
 #chevron4::after {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 30px;
-  height: 25px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background: #0089e0;
-  border: 0 solid "transparent";
-  transform: skew(0, 40deg);
-  bottom: 12.58649px;
-  right: 0;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  transform: rotate(270deg) skew(45deg);
+  top: -25px;
+  left: 25px;
 }
 
 /**
  * arrow
  */
-/* line 123, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+/* line 198, /sites/_libraries/natural-shapes.lan/demo/style.scss */
 #arrow1 {
-  content: "";
-  box-sizing: content-box;
-  width: 3em;
-  height: 3em;
-  background: "transparent";
-  border: 0 solid "transparent";
+  position: relative;
   box-sizing: border-box;
-  border-top: 1em solid #0089e0;
-  border-right: 1em solid #0089e0;
-  transform: rotate(-45deg);
-  transform-origin: 1.5em 1.5em;
+  width: 73.33452px;
+  height: 100px;
+  overflow: hidden;
 }
 
-/* line 127, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#arrow2 {
+/* line 27, /sites/_libraries/natural-shapes.lan/dist/shapes/arrow.scss */
+#arrow1::before {
   content: "";
+  display: block;
   box-sizing: content-box;
-  width: 50px;
-  height: 50px;
-  background: "transparent";
-  border: 0 solid "transparent";
+  position: absolute;
+  width: 70.71068px;
+  height: 70.71068px;
+  background: transparent;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
   box-sizing: border-box;
-  border-top: 20px solid #0089e0;
-  border-right: 20px solid #0089e0;
+  border-top: 33px solid #0089e0;
+  border-right: 33px solid #0089e0;
   transform: rotate(45deg);
-  transform-origin: 25px 25px;
+  transform-origin: top right;
+  top: 50px;
+  right: 0;
 }
 
-/* line 131, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#arrow3 {
-  content: "";
-  box-sizing: content-box;
-  width: 50px;
-  height: 50px;
-  background: "transparent";
-  border: 0 solid "transparent";
+/* line 202, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow2 {
+  position: relative;
   box-sizing: border-box;
-  border-top: 20px solid #0089e0;
-  border-right: 20px solid #0089e0;
+  width: 100px;
+  height: 73.33452px;
+  overflow: hidden;
+}
+
+/* line 27, /sites/_libraries/natural-shapes.lan/dist/shapes/arrow.scss */
+#arrow2::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 70.71068px;
+  height: 70.71068px;
+  background: transparent;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  box-sizing: border-box;
+  border-top: 33px solid #0089e0;
+  border-right: 33px solid #0089e0;
   transform: rotate(135deg);
-  transform-origin: 25px 25px;
+  transform-origin: top right;
+  top: 73.33452px;
+  right: 50px;
 }
 
-/* line 135, /sites/_libraries/natural-shapes.lan/demo/style.scss */
-#arrow4 {
+/* line 206, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow3 {
+  position: relative;
+  box-sizing: border-box;
+  width: 73.33452px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* line 27, /sites/_libraries/natural-shapes.lan/dist/shapes/arrow.scss */
+#arrow3::before {
   content: "";
+  display: block;
   box-sizing: content-box;
+  position: absolute;
+  width: 70.71068px;
+  height: 70.71068px;
+  background: transparent;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  box-sizing: border-box;
+  border-top: 33px solid #0089e0;
+  border-right: 33px solid #0089e0;
+  transform: rotate(225deg);
+  transform-origin: top right;
+  top: 50px;
+  right: 73.33452px;
+}
+
+/* line 210, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#arrow4 {
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 73.33452px;
+  overflow: hidden;
+}
+
+/* line 27, /sites/_libraries/natural-shapes.lan/dist/shapes/arrow.scss */
+#arrow4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 70.71068px;
+  height: 70.71068px;
+  background: transparent;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  box-sizing: border-box;
+  border-top: 33px solid #0089e0;
+  border-right: 33px solid #0089e0;
+  transform: rotate(315deg);
+  transform-origin: top right;
+  top: 0;
+  right: 50px;
+}
+
+/**
+ * Progress
+ */
+/* line 218, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress1 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress1::before, #progress1::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress1::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
   width: 50px;
   height: 50px;
-  background: "transparent";
-  border: 0 solid "transparent";
-  box-sizing: border-box;
-  border-top: 20px solid #0089e0;
-  border-right: 20px solid #0089e0;
-  transform: rotate(225deg);
-  transform-origin: 25px 25px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(0deg);
+  transform-origin: bottom right;
+}
+
+/* line 20, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress1::before, #progress1::after {
+  content: none;
+}
+
+/* line 221, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress2 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress2::before, #progress2::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress2::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(43.2deg);
+  transform-origin: bottom right;
+}
+
+/* line 28, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress2::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  border-right: transparent;
+  z-index: 100;
+  transform-origin: bottom right;
+}
+
+/* line 224, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress3 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress3::before, #progress3::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress3::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress3::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  z-index: 100;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+/* line 227, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress4 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress4::before, #progress4::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress4::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(118.8deg);
+  transform-origin: bottom right;
+}
+
+/* line 38, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress4::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  z-index: 100;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+/* line 230, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress5 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress5::before, #progress5::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress5::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(180deg);
+  transform-origin: bottom right;
+}
+
+/* line 48, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress5::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  z-index: 100;
+  transform: rotate(90deg);
+  transform-origin: bottom center;
+}
+
+/* line 233, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress6 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #8bdae0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress6::before, #progress6::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress6::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(237.6deg);
+  transform-origin: bottom right;
+}
+
+/* line 48, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress6::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  z-index: 100;
+  transform: rotate(90deg);
+  transform-origin: bottom center;
+}
+
+/* line 236, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress7 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #a742e0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress7::before, #progress7::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress7::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(270deg);
+  transform-origin: bottom right;
+}
+
+/* line 59, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress7::before {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #8bdae0;
+  border-bottom: transparent;
+  border-right: transparent;
+  z-index: 99;
+}
+
+/* line 64, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress7::after {
+  z-index: 100;
+}
+
+/* line 239, /sites/_libraries/natural-shapes.lan/demo/style.scss */
+#progress8 {
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #0089e0;
+  border: 30px solid #a742e0;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-radius: 99999px;
+  transform-origin: center center;
+  position: relative;
+}
+
+/* line 3, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress8::before, #progress8::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 11, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress8::after {
+  z-index: 99;
+  content: "";
+  display: block;
+  box-sizing: content-box;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: 0 solid transparent;
+  transform: rotate(0);
+  transform-origin: bottom center;
+  border-top-left-radius: 100%;
+  transform: rotate(0);
+  border: 30px solid #a742e0;
+  border-bottom: transparent;
+  border-right: transparent;
+  transform: rotate(360deg);
+  transform-origin: bottom right;
+}
+
+/* line 70, /sites/_libraries/natural-shapes.lan/dist/shapes/progress.scss */
+#progress8::before, #progress8::after {
+  content: none;
 }

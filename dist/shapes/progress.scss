@@ -1,33 +1,4 @@
-@mixin natural-basic-progress($centerColor, $diameter, $barActiveColor, $barInactiveColor, $barWidth, $percent:0) {
-
-    @include natural-circle($centerColor, $diameter);
-
-    border-radius: 50%;
-    background: $centerColor;
-    border: $barWidth solid $barInactiveColor;
-    transform: rotate(45deg);
-
-    @if $percent >= 0.125 {
-        border-top-color: $barActiveColor;
-    }
-
-    @if $percent >= 0.375 {
-        border-right-color: $barActiveColor;
-    }
-
-    @if $percent >= 0.625 {
-        border-bottom-color: $barActiveColor;
-    }
-
-    @if $percent >= 0.875 {
-        border-left-color: $barActiveColor;
-    }
-
-}
-
 @mixin natural-progress($centerColor, $diameter, $barActiveColor, $barInactiveColor, $barWidth, $percent:0) {
-
-    position: relative;
 
     &::before, &::after {
         display: block;
@@ -39,7 +10,7 @@
 
     &::after {
         z-index: 99;
-        @include natural-quarter-circle($centerColor, $diameter/2, $barActiveColor, $barWidth);
+        @include natural-quarter-circle-shape(none, $diameter, $barActiveColor, $barWidth);
         transform: rotate($percent * 3.6deg);
         transform-origin: bottom right;
     }
@@ -49,23 +20,23 @@
         &::before, &::after {
             content: none;
         }
-        @include natural-circle($centerColor, $diameter, $barInactiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barInactiveColor, $barWidth);
 
     } @else if $percent > 0 and $percent < 25 {
-        @include natural-circle($centerColor, $diameter, $barInactiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barInactiveColor, $barWidth);
 
         &::before {
-            @include natural-quarter-circle($centerColor, $diameter/2, $barInactiveColor, $barWidth);
+            @include natural-quarter-circle-shape(none, $diameter, $barInactiveColor, $barWidth);
             z-index: 100;
             transform-origin: bottom right;
         }
 
         // First quarter
     } @else if $percent >= 25 and $percent < 50 {
-        @include natural-circle($centerColor, $diameter, $barInactiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barInactiveColor, $barWidth);
 
         &::before {
-            @include natural-quarter-circle($centerColor, $diameter/2, $barActiveColor, $barWidth);
+            @include natural-quarter-circle-shape(none, $diameter, $barActiveColor, $barWidth);
             z-index: 100;
             transform: rotate(90deg);
             transform-origin: bottom right;
@@ -73,9 +44,9 @@
 
         // Second quarter
     } @else if $percent >= 50 and $percent < 75 {
-        @include natural-circle($centerColor, $diameter, $barInactiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barInactiveColor, $barWidth);
         &::before {
-            @include natural-half-circle($centerColor, $diameter, $barActiveColor, $barWidth);
+            @include natural-half-circle-shape(none, $diameter, $barActiveColor, $barWidth);
             z-index: 100;
             transform: rotate(90deg);
             transform-origin: bottom center;
@@ -83,10 +54,10 @@
 
         // Third quarter
     } @else if $percent >= 75 and $percent < 100 {
-        @include natural-circle($centerColor, $diameter, $barActiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barActiveColor, $barWidth);
 
         &::before {
-            @include natural-quarter-circle($centerColor, $diameter/2, $barInactiveColor, $barWidth);
+            @include natural-quarter-circle-shape(none, $diameter, $barInactiveColor, $barWidth);
             z-index: 99;
         }
 
@@ -99,8 +70,10 @@
         &::before, &::after {
             content: none;
         }
-        @include natural-circle($centerColor, $diameter, $barActiveColor, $barWidth);
+        @include natural-circle-shape($centerColor, $diameter, $barActiveColor, $barWidth);
 
     }
+
+    position: relative;
 
 }

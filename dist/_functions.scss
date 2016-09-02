@@ -1,7 +1,4 @@
 
-@function chevron-decallage($thickness, $width, $skew) {
-    @return tan($skew) * $width;
-}
 
 @function natural-trigonometry-basics($w, $h, $b, $assimetry) {
 
